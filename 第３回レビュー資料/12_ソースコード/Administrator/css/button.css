@@ -1,0 +1,30 @@
+.button-container {
+    display: flex;
+    justify-content: space-between; /* ボタンを左右に配置 */
+    align-items: center; /* ボタンを縦方向に中央揃え */
+    margin-top: 20px; /* 上に余白を追加 */
+}
+
+button, input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between; /* 左右に配置 */
+    align-items: center; /* 縦方向の中央揃え */
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.left-link, .right-link a {
+    color: purple;
+    text-decoration: underline;
+}
+
+.right-link {
+    display: flex;
+    gap: 10px; /* 「管理者さん」と「ログアウト」の間にスペースを追加 */
+}

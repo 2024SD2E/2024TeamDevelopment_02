@@ -1,0 +1,65 @@
+/* ベーススタイル */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* タイトル部分 */
+h2 {
+    padding-left: 20px;
+    text-align: left;
+}
+
+/* ヘッダーの配置 */
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 20px;
+}
+
+
+header a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #007BFF;
+    padding: 0 10px;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+/* ボタンスタイル */
+button {
+    font-size: 20px;
+    padding: 15px 30px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* 中央寄せ */
+a {
+    display: inline-block;
+    margin: 20px 0;
+}
+
+a button {
+    width: 300px;
+}
+
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+}

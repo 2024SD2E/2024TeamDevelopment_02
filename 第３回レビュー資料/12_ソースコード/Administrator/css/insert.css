@@ -1,0 +1,111 @@
+/* 基本スタイル */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* タイトル部分 */
+h2 {
+    margin: 0;
+    padding: 20px 20px;
+    text-align: left;
+}
+
+/* ヘッダー配置 */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.header-links {
+    display: flex;
+    padding: 0 10px;
+    gap: 15px;
+}
+
+.header-links a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #007BFF;
+    transition: color 0.3s;
+}
+
+.header-links a:hover {
+    color: #0056b3;
+}
+
+/* 前ページへ戻るボタン */
+header p:first-child {
+    flex: 1;
+    text-align: left;
+}
+
+/* フォーム部分 */
+form {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: left;
+}
+
+form p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form input[type="file"] {
+    font-size: 14px;
+}
+
+form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+form span {
+    font-size: 12px;
+    color: red;
+}
+
+button {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+}

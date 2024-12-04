@@ -1,0 +1,80 @@
+/* 全体のスタイリング */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 上部のスタイル（全体に配置） */
+.container h2:first-of-type {
+    text-align: left;
+    margin-left: 70px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* hrのスタイル */
+hr {
+    margin: 20px auto; /* 上下にスペースを作成 */
+    width: 90%;        /* 横幅の調整 */
+    border: none;
+    height: 1px;
+    background: #ccc;
+}
+
+/* 中央に配置する部分 */
+form {
+    max-width: 400px;
+    margin: auto; /* 横方向中央配置 */
+    margin-top: 40px; /* <hr>から十分な間隔を確保 */
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    border-color: rgb(104, 104, 104);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* フォームの要素 */
+form h2 {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: rgb(64, 64, 64);
+}
+
+/* メッセージのスタイル */
+.container form p {
+    text-align: center;
+    color: red;
+    margin-top: 10px;
+}

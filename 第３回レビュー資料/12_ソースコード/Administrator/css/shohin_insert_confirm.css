@@ -1,0 +1,96 @@
+/* 基本スタイル */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* タイトル部分 */
+h2 {
+    margin: 0;
+    padding: 20px 20px;
+    text-align: left;
+}
+
+/* ヘッダー配置 */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header p:first-child {
+    flex: 1;
+    text-align: left;
+}
+
+header p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.header-links {
+    display: flex;
+    padding: 0 10px;
+    gap: 15px;
+}
+
+.header-links a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #007BFF;
+    transition: color 0.3s;
+}
+
+.header-links a:hover {
+    color: #0056b3;
+}
+
+/* フォーム部分 */
+form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: left;
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form span, form p {
+    font-size: 16px;
+}
+
+form img {
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

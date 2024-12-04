@@ -1,0 +1,113 @@
+/* ヘッダー部分 */
+header {
+    display: flex;
+    justify-content: space-between; /* 左右に分ける */
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+/* ログイン者名とログアウトボタンの右寄せ */
+.header-right {
+    margin-left: auto; /* 右寄せ */
+    display: flex;
+    align-items: center;
+}
+
+.header-right p {
+    margin-right: 10px; /* 名前とボタンの間の余白 */
+}
+
+.header-right a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.header-right a:hover {
+    text-decoration: underline;
+}
+
+
+/* タイトル部分 */
+h2 {
+    text-align: left;
+    padding: 0 20px;
+    font-size: 24px;
+}
+
+/* テーブル部分 */
+table {
+    width: 80%;
+    margin: 40px auto; /* 中央寄せ */
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #e0f7fa;
+}
+
+.update-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+.update-btn:hover {
+    background-color: #218838;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+form {
+    text-align: center; /* フォーム内の要素を中央に配置 */
+    margin: 20px auto; /* フォーム自体を中央寄せ */
+}
+
+input[type="submit"] {
+    background-color: #007bff; /* ボタンの背景色 */
+    color: white; /* ボタンの文字色 */
+    border: none; /* ボーダーをなくす */
+    padding: 10px 20px; /* ボタンの内側の余白 */
+    cursor: pointer; /* カーソルを変更 */
+    font-size: 16px; /* フォントサイズ */
+    border-radius: 5px; /* ボタンの角を丸める */
+    display: inline-block; /* 中央寄せのための設定 */
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* ホバー時の背景色 */
+}
