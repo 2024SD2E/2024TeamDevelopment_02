@@ -91,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <p><?php echo nl2br($shohin_description); ?></p>
             <input type="hidden" name="shohin_description" value="<?php echo $shohin_description; ?>">
         </div>
-        <button type="submit">商品を登録する</button>
+        <button type="submit">商品を更新する</button>
     </form>
 </body>
 
