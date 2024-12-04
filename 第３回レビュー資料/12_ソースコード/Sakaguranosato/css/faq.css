@@ -1,0 +1,34 @@
+/* FAQセクション専用のスタイル */
+.faq-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+    text-align: center; /* リスト全体を中央寄せ */
+}
+
+.faq-item {
+    font-weight: bold;
+    margin: 20px 0 5px;
+    color: black;
+}
+
+.faq-answer {
+    margin: 0 0 20px;
+    color: black;
+    text-align: center; /* 説明文を中央寄せ */
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .faq-list {
+        padding: 0 10px;
+    }
+
+    .faq-item {
+        font-size: 1em;
+    }
+
+    .faq-answer {
+        font-size: 0.9em;
+    }
+}

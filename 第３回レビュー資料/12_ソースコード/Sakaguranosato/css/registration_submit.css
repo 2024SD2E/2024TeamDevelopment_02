@@ -1,0 +1,43 @@
+/* header と footer を固定 */
+header {
+    height: 70px; /* ヘッダーの高さ */
+}
+
+
+/* body全体の設定 */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* 上下方向のレイアウト */
+    min-height: 100vh;      /* ビューポート全体の高さを確保 */
+}
+
+/* コンテンツエリア */
+.registration {
+    flex: 1; /* ヘッダーとフッター以外の余白を占める */
+    justify-content: center; /* 水平方向の中央揃え */
+    align-items: center;    /* 垂直方向の中央揃え */
+    text-align: center;
+    border-radius: 8px;
+    padding: 20px 40px;
+}
+.registration h1{
+    font-family: serif;
+    font-weight: bold;
+}
+.registration a{
+    text-decoration: none;
+}
+.registration a:hover {
+    text-decoration: underline;
+}
+
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .registration h1 {
+        font-size: 1.5rem; /* 小画面時のフォントサイズ */
+        padding-top: 5px;
+    }
+}

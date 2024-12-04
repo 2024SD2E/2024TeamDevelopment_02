@@ -1,0 +1,170 @@
+/* 全体のスタイル */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.cart-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 15px;
+    box-sizing: border-box; /* パディングを含めた幅設定 */
+    min-height: 100vh;
+}
+
+h2.centered {
+    text-align: center;
+    color: #333;
+    font-size: 1.5em;
+}
+
+/* カート内の商品 */
+.cart-items {
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    flex-wrap: wrap; /* はみ出し防止のため折り返し可能に */
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+}
+
+.item-image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-right: 15px;
+    flex-shrink: 0; /* 画像のサイズが縮小されないように */
+}
+
+.item-details {
+    flex-grow: 1;
+    min-width: 200px; /* 最小幅を指定して崩れ防止 */
+}
+
+.item-name {
+    font-size: 1.1em;
+    color: #333;
+    margin: 0;
+}
+
+.item-price {
+    font-size: 1em;
+    color: #777;
+}
+
+.item-quantity {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px; /* 要素の間隔を確保 */
+}
+
+.item-quantity input {
+    width: 60px;
+    padding: 5px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.item-total {
+    margin-left: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 10px; /* 上下のスペースを調整 */
+}
+
+/* カート合計 */
+.cart-summary {
+    text-align: right;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* ボタン */
+.cart-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap; /* はみ出し防止のため折り返し可能に */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    text-align: center; /* ボタン内テキストを中央揃え */
+}
+
+button #del_button{
+    background-color: red;
+    color: white;
+}
+
+button #del_button:hover{
+    background-color: rgb(253, 31, 31);
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    width: 100%; /* リンクをボタン全体に */
+}
+
+button:hover {
+    background-color: rgb(41, 41, 41);
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .cart-container {
+        padding: 10px;
+        margin: 10px;
+        width: calc(100% - 20px); /* 横幅に収まるように調整 */
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .item-image {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px; /* 縦並び時のスペース調整 */
+    }
+
+    .item-details {
+        margin-bottom: 10px;
+    }
+
+    .item-quantity {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .cart-summary {
+        font-size: 1.1em;
+    }
+
+    .cart-buttons {
+        flex-direction: column;
+        align-items: stretch; /* ボタンの幅を広げる */
+    }
+
+    button {
+        width: 100%; /* ボタンが画面幅いっぱいに広がる */
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,48 @@
+/* .contact_submit 親要素 */
+.contact_submit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 縦方向に中央揃え */
+  align-items: center; /* 横方向に中央揃え */
+  height: 100vh; /* ビューポート全体の高さ */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* 文字「お問い合わせを受け付けました。」 */
+.contact_submit h1 {
+  text-align: center;
+  font-family: serif;
+  font-weight: bold;
+  margin-bottom: 20px; /* 下に余白を追加 */
+}
+
+/* 「マイページに戻る」センタリング */
+.contact_submit p {
+  text-align: center;
+  margin-bottom: 20px; /* 下に余白を追加 */
+}
+
+/* カーソルあてると下線出る */
+.contact_submit a {
+  text-decoration: none;
+  font-size: 16px;
+}
+.contact_submit a:hover {
+  text-decoration: underline;
+}
+
+/* ===== レスポンシブ対応 ===== */
+@media (max-width: 480px) {
+  .contact_submit h1 {
+    font-size: 18px; /* 小画面ではフォントサイズを調整 */
+  }
+
+  .contact_submit p {
+    font-size: 14px; /* 小画面で少し小さく調整 */
+  }
+
+  .contact_submit a {
+    font-size: 14px; /* リンクのフォントサイズも調整 */
+  }
+}

@@ -1,0 +1,120 @@
+/* 共通スタイル */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* スライドショー */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: fade 9s infinite;
+}
+
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 3s; }
+.slide:nth-child(3) { animation-delay: 6s; }
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes fade {
+    0% { opacity: 0; }
+    33% { opacity: 1; }
+    66% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* 商品本文 */
+.main-container {
+    padding: 20px;
+    text-align: center; /* 中央揃え */
+}
+
+h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 24px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 最大3列 */
+    gap: 30px; /* カード間のスペース */
+    justify-items: center; /* カードを中央揃え */
+    padding: 0 20px;
+    max-width: 900px; /* 最大幅を制限 */
+    margin: 0 auto; /* グリッドを中央揃え */
+}
+
+.product-card {
+    width: 100%; /* カード幅を親に合わせる */
+    max-width: 220px; /* 最大幅を固定 */
+    height: 280px; /* カードの固定高さ */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 内容を上下に配置 */
+    align-items: center; /* 中央揃え */
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s; /* ホバー時のアニメーション */
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* 浮き上がる効果 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* ホバー時の影 */
+}
+
+.product-card img {
+    width: 120px;
+    max-width: 120px; /* 画像の最大幅を固定 */
+    height: 120px; /* アスペクト比を維持 */
+    object-fit: contain;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.product-card a {
+    text-decoration: none;
+}
+
+.product-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.product-price {
+    font-size: 18px;
+    color: #333;
+}
+
+/* レスポンシブ調整 */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 最小2列 */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr; /* スマホでは1列 */
+    }
+}

@@ -1,0 +1,115 @@
+/* コンテンツエリア全体の設定 */
+.user_edit .main-content {
+    padding: 20px; /* コンテンツの内側に余白を追加 */
+    margin: 0 auto; /* 左右の余白を自動で調整して中央に配置 */
+    max-width: 800px; /* 最大幅を設定して、画面幅いっぱいに広がらないようにする */
+    box-sizing: border-box; /* パディングを含めて幅を計算 */
+}
+
+.user_edit h1, h2 {
+    margin: 0;
+    padding: 20px;
+}
+/* フォームのスタイル */
+.user_edit form {
+    margin: 0;
+    padding: 20px;
+}
+
+/* フォーム内の各セクション */
+.user_edit h3 {
+    padding: 0 20px;
+}
+
+.user_edit form input[type="text"],
+.user_edit form input[type="date"],
+.user_edit form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+/* メールアドレスの入力欄 */
+.user_edit form input[name="email"] {
+    width: 100%; /* フィールド幅を100%に設定して、親コンテナに合わせる */
+    padding: 10px; /* パディングを追加して、入力欄の高さを調整 */
+    margin: 10px 0; /* 上下のマージンを調整 */
+    border: 1px solid #ddd; /* 枠線のスタイル */
+    border-radius: 4px; /* 角を丸くする */
+    font-size: 16px; /* フォントサイズ調整 */
+}
+
+/* フォーカス時に枠線の色を変更 */
+.user_edit form input[name="email"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+
+.user_edit form input[type="text"]:focus,
+.user_edit form input[type="date"]:focus,
+.user_edit form input[type="password"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* ラジオボタンとラベルのレイアウト */
+.user_edit .address-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+
+.user_edit .address-info p {
+    margin: 0;
+}
+
+.user_edit .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* ボタン同士の間隔を指定 */
+}
+
+/* ボタンのスタイル */
+.user_edit form input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    height: 50px; /* 高さを固定で指定 */
+    box-sizing: border-box; /* パディングを含めた計算 */
+}
+.user_edit form input[type="submit"]:hover {
+    background-color: rgb(36, 36, 36);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .user_edit .main-content {
+        padding: 15px; /* 小さな画面での余白を調整 */
+        margin: 20px auto; /* 上下の余白を加えて、中央に配置 */
+    }
+
+    .user_edit .address-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .user_edit .button-container {
+        flex-direction: column; /* ボタンを縦方向に配置 */
+        align-items: center; /* ボタンを中央揃え */
+    }
+
+    .user_edit form input[type="submit"] {
+        width: 100%; /* ボタンを全幅にする */
+    }
+
+}

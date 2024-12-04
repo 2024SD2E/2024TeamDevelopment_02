@@ -1,0 +1,171 @@
+/* 全体 */
+* {
+    box-sizing: border-box; /* すべての要素にbox-sizingを適用 */
+}
+
+.registration {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding: 0 10px; /* 余白を追加 */
+}
+
+/* 「新規会員登録」「新規会員登録確認」の部分 */
+.registration h1 {
+    text-align: center;
+    font-family: serif;
+    font-weight: bold;
+}
+
+/* ラベルタグのマージンを調整 */
+.registration label[for="name"],
+.registration label[for="birthdate"],
+.registration label[for="address"],
+.registration label[for="mail"],
+.registration label[for="password"],
+.registration label[for="nickname"] {
+    margin-right: 10px;
+}
+
+/* クラスf1、f2~f4の幅を調整 */
+.registration .f1,
+.registration #f4,
+.registration input[type="text"],
+.registration input[type="password"],
+.registration input[type="date"],
+.registration input[type="tel"] {
+    width: 100%; /* 入力フィールドを全幅に */
+    height: 40px; /* 高さを統一 */
+    padding: 8px;
+    font-size: 16px;
+}
+
+.registration .f2 {
+    width: 70%; /* 200pxから70%に変更 */
+}
+
+.registration #f3 {
+    width: 40%; /* 50pxから40%に変更 */
+}
+
+/* 「訂正する場合～」「間違えがなければ～」 */
+.registration #correction,
+.registration #correction2 {
+    text-align: center;
+    color: red;
+}
+
+/* 「必須」部分 */
+.registration .mark {
+    color: white;
+    border-color: red;
+    background-color: red;
+    font-size: 14px;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.registration .mark2 {
+    color: white;
+    border-color: white;
+    background-color: white;
+    font-size: 10px;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* 確認ボタンのスタイル */
+.registration .button {
+    text-align: center;
+}
+
+input[type="submit"] {
+    width: 100%; /* ボタンを全幅に */
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
+
+#nickname_ex {
+    color: red;
+    font-size: 14px;
+}
+
+/* スマートフォン向け（768px以下） */
+@media (max-width: 768px) {
+    .registration {
+        flex-direction: column; /* 縦並びに変更 */
+        padding: 20px;
+    }
+    
+    .registration h1 {
+        font-size: 24px; /* ヘッダー文字サイズを調整 */
+    }
+
+    .registration label {
+        margin-right: 0;
+        margin-bottom: 10px;
+        display: block; /* ラベルをブロック表示 */
+        text-align: left;
+    }
+
+    .registration .f1,
+    .registration #f4 {
+        width: 100%; /* 入力欄を全幅に調整 */
+    }
+
+    .registration .f2 {
+        width: 70%;
+    }
+
+    .registration #f3 {
+        width: 40%;
+    }
+
+    .registration .button #submit {
+        width: 100%; /* ボタンを全幅に */
+    }
+}
+
+/* タブレット向け（769px～1024px） */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .registration {
+        flex-direction: column; /* 縦並びを維持 */
+        padding: 20px;
+    }
+
+    .registration h1 {
+        font-size: 28px;
+    }
+
+    .registration .f1,
+    .registration #f4 {
+        width: 80%; /* 入力欄の幅を80%に */
+    }
+
+    .registration .f2 {
+        width: 70%;
+    }
+
+    .registration #f3 {
+        width: 50%;
+    }
+
+    .registration .button #submit {
+        width: 80%; /* ボタン幅を調整 */
+    }
+}

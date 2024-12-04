@@ -1,0 +1,87 @@
+/* 全体 */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* マイページ全体を囲むID（ヘッダー、フッターとの干渉防止） */
+#mypage {
+  padding-top: 80px; /* ヘッダーの高さ分だけ上に余白を追加 */
+  padding-bottom: 80px; /* フッターの高さ分だけ下に余白を追加 */
+}
+
+/* マイページのh1 */
+#mypage h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+/* 横線 */
+#mypage hr {
+  margin: 20px auto;
+  width: 80%;
+  border: 1px solid #ccc;
+}
+
+/* リストのスタイル */
+#mypage ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 中央揃え */
+  justify-content: center;
+}
+
+/* 各リンクのスタイル */
+#mypage ul h2 {
+  margin: 10px 0;
+}
+
+#mypage ul h2 a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#mypage ul h2 a:hover {
+  background-color: #ddd;
+}
+
+
+
+/* レスポンシブ対応 */
+@media (min-width: 768px) {
+  #mypage ul {
+    flex-direction: row; /* 画面幅が768px以上なら横並びに */
+    justify-content: space-around;
+  }
+
+  #mypage ul h2 {
+    margin: 0 20px;
+  }
+
+  #mypage ul h2 a {
+    font-size: 1rem; /* 横並びでは少し小さく */
+  }
+}
+
+@media (max-width: 480px) {
+  #mypage h1 {
+    font-size: 1.5rem; /* スマートフォンで文字を少し小さく */
+  }
+
+  #mypage ul h2 a {
+    font-size: 1rem; /* リスト項目の文字も小さく */
+    padding: 8px; /* 少しコンパクトに */
+  }
+}

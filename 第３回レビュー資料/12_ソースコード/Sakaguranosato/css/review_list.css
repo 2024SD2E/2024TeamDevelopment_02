@@ -1,0 +1,128 @@
+/* 基本設定 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* レビュー一覧ページ専用コンテナ */
+#reviews-page {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* レビュー一覧ページのタイトル */
+#reviews-page h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* レビューセクションのスタイル */
+#reviews-page .reviews-container {
+    background-color: #fff;
+    padding: 20px;
+}
+
+/* 商品名リンク */
+#reviews-page .reviews-container p.review-product-name a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#reviews-page .reviews-container p.review-product-name a:hover {
+    color: #007bff;
+}
+
+/* 評価の★ */
+#reviews-page .reviews-container p.review-rating {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: orange;
+}
+
+/* コメント部分 */
+#reviews-page .reviews-container p.review-comment {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* hrのスタイル */
+#reviews-page .reviews-container hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+/* レビューがない場合のメッセージ */
+#reviews-page .reviews-container p.no-reviews {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #888;
+}
+
+/* 削除ボタンのスタイル */
+/* 削除ボタンを右に寄せる */
+.delete-review-form {
+    text-align: right; /* ボタンを右寄せ */
+    margin-top: 10px; /* ボタンとレビューの間に余白 */
+}
+
+.delete-button {
+    background-color: red;
+    color: white;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: darkred; /* ホバー時の色変更 */
+}
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    #reviews-page h1 {
+        font-size: 1.8rem;
+    }
+
+    #reviews-page .reviews-container p {
+        font-size: 1rem;
+    }
+
+    #reviews-page .reviews-container p.review-product-name a {
+        font-size: 1.1rem;
+    }
+
+    #reviews-page .reviews-container {
+        padding: 15px;
+    }
+
+    #reviews-page {
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    #reviews-page h1 {
+        font-size: 1.5rem;
+    }
+
+    #reviews-page .reviews-container p {
+        font-size: 0.9rem;
+    }
+
+    #reviews-page .reviews-container p.review-product-name a {
+        font-size: 1rem;
+    }
+
+    #reviews-page .reviews-container {
+        padding: 10px;
+    }
+}

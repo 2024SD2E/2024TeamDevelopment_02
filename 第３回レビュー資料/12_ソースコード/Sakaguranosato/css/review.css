@@ -1,0 +1,100 @@
+/* 全体のリセット */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* レビュー確認ページのスタイル */
+.review-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.review-container h1 {
+    text-align: center;
+    font-family: serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.review-container #correction {
+    text-align: center;
+    color: red;
+    margin-bottom: 20px;
+}
+
+.review-container .review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* 各要素間のスペース */
+}
+
+.review-container p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.review-container input[type="text"],
+.review-container input[type="number"],
+.review-container textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.review-container textarea {
+    resize: vertical; /* サイズ変更を垂直方向のみに制限 */
+}
+
+.review-container input[type="submit"] {
+    width: 100%;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.review-container input[type="submit"]:hover {
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
+
+/* メディアクエリ: スマートフォン用 */
+@media (max-width: 480px) {
+    .review-container {
+        padding: 5px;
+    }
+
+    .review-container h1 {
+        font-size: 20px;
+    }
+
+    .review-container p {
+        font-size: 14px;
+    }
+
+    .review-container input[type="text"],
+    .review-container input[type="number"],
+    .review-container textarea {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .review-container input[type="submit"] {
+        font-size: 14px;
+        padding: 8px;
+    }
+}

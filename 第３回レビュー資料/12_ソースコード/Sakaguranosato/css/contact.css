@@ -1,0 +1,120 @@
+/* 全体 */
+.contact {
+  display: flex;
+  flex-direction: column; /* デフォルトを縦並びに */
+  align-items: center;
+  width: 100%;
+  padding: 20px; /* 全体に余白を追加 */
+  box-sizing: border-box; /* パディングを含むボックスサイズ */
+}
+
+/*「お問い合わせ」文字*/
+.contact h1 {
+  text-align: center;
+  font-family: serif;
+  font-weight: bold;
+  margin-bottom: 20px; /* 下に余白を追加 */
+}
+
+/* 「必須」を白文字、赤枠で表示 */
+.contact .mark {
+  color: white;
+  border-color: red;
+  background-color: red;
+  font-size: 10px;
+  border-radius: 5px;
+  padding: 2px 5px;
+}
+.contact .mark2 {
+  color: white;
+  border-color: white;
+  background-color: white;
+  font-size: 10px;
+  border-radius: 5px;
+  padding: 2px 5px;
+}
+
+/*「お名前」「電話番号」「メールアドレス」「お問い合わせ内容」テキストボックスをセンタリング*/
+.contact label {
+  display: block; /* ラベルをブロック要素に変更 */
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.contact input,
+.contact textarea {
+  width: 100%; /* 画面幅に合わせる */
+  max-width: 400px; /* 最大幅を指定 */
+  padding: 10px; /* 内側の余白を追加 */
+  margin-bottom: 20px; /* 下に余白を追加 */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/*お問い合わせ内容テキストボックスサイズ固定*/
+.contact textarea {
+  resize: none;
+  height: 100px;
+}
+
+/* 完了ボタン */
+.contact .button {
+  text-align: center;
+  width: 100%; /* ボタンを画面幅に合わせる */
+  max-width: 400px;
+}
+.contact .button #submit {
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px; /* 最大幅を設定 */
+  height: 40px;
+}
+
+/* カーソルがボタンに当たったときの対応 */
+.contact .button #submit:hover {
+  background-color: rgb(35, 35, 35);
+}
+
+/* ===== レスポンシブ対応 ===== */
+@media (min-width: 768px) {
+  .contact {
+    flex-direction: row; /* 横並びに変更 */
+    justify-content: center;
+    padding: 40px; /* 余白を広げる */
+  }
+
+  .contact label {
+    display: inline-block; /* ラベルを横並びに */
+    margin-bottom: 0;
+    margin-right: 10px; /* 横方向の余白を追加 */
+  }
+
+  .contact input,
+  .contact textarea {
+    width: auto; /* 幅を自動調整 */
+    max-width: 300px;
+  }
+
+  .contact .button {
+    text-align: right;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 10px; /* 小画面では全体の余白を縮小 */
+  }
+
+  .contact input,
+  .contact textarea {
+    width: 100%; /* 小画面では幅を全体に */
+    max-width: none;
+  }
+
+  .contact .button #submit {
+    width: 100%; /* ボタンを画面幅に合わせる */
+    max-width: 300px;
+  }
+}

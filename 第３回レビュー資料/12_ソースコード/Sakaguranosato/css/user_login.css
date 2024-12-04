@@ -1,0 +1,105 @@
+/* 全体のスタイル */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* コンテナ */
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* タイトル */
+.login-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* フォーム */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ラベルと入力欄 */
+.user-login-label {
+    font-size: 14px;
+    text-align: left;
+    width: 100%;
+    margin: 10px 0 5px;
+}
+
+.user-login-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* リンク */
+.user-login-link {
+    font-size: 12px;
+    color: #007bff;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+.user-login-link:hover {
+    text-decoration: underline;
+}
+
+/* ボタン */
+.user-login-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.user-login-button:hover {
+    background-color: #444;
+}
+
+.login-container .message p {
+    text-align: center;
+    color: red;
+}
+
+/* 小さい画面用の調整 */
+@media screen and (max-width: 600px) {
+    .login-container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    form p {
+        font-size: 12px;
+    }
+
+    form input {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    form button {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+}

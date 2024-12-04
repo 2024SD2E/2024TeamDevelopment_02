@@ -1,0 +1,98 @@
+/* フッター全体 */
+footer {
+    padding: 20px 0 0;
+    display: flex; /* Flexboxの有効化 */
+    justify-content: center; /* 横並びの中央揃え */
+    align-items: center; /* 垂直方向の中央揃え */
+    flex-wrap: wrap; /* 折り返し対応 */
+    text-align: center;
+}
+
+/* フッターコンテナ */
+.footer-container {
+    display: flex;
+    justify-content: center; /* 子要素を中央揃え */
+    flex-wrap: wrap; /* 折り返し対応 */
+    gap: 20px; /* セクション間のスペース */
+    max-width: 1200px;
+    width: 100%; /* フッター全体に広げる */
+}
+
+/* 各セクション */
+.footer-section {
+    flex: 1; /* 各セクションを均等に配置 */
+    min-width: 150px; /* セクションの最小幅 */
+    text-align: center;
+}
+
+.footer-section h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+    color: #000;
+}
+
+/* フッターボトム部分 */
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    color: white;
+    background-color: black;
+    width: 100%; /* 中央揃えのため全幅を占める */
+    text-align: center;
+    border: 2px solid black; /* 黒枠を追加 */
+    padding: 10px; /* 内側の余白を設定 */
+    box-sizing: border-box; /* パディング込みで幅を調整 */
+}
+
+/* --- レスポンシブデザイン対応 --- */
+
+/* 小画面（タブレットサイズ以下） */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column; /* 縦並びに切り替え */
+        align-items: center; /* 子要素を中央揃え */
+    }
+
+    .footer-container {
+        flex-direction: column; /* フッター全体を縦並びに */
+    }
+
+    .footer-section {
+        margin-bottom: 20px; /* 各セクションに余白を追加 */
+    }
+}
+
+/* スマートフォンサイズ（さらに小さい画面） */
+@media (max-width: 480px) {
+    .footer-section h3 {
+        font-size: 14px;
+    }
+
+    .footer-section ul li a {
+        font-size: 12px;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+    }
+}

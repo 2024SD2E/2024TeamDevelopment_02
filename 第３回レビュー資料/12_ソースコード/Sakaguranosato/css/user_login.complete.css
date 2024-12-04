@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.message-container {
+    background-color: #ffffff;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center; /* 中央揃え */
+}
+
+a {
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+    text-align: center; /* 中央揃え */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* レスポンシブ調整 */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 最小2列 */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr; /* スマホでは1列 */
+    }
+}
