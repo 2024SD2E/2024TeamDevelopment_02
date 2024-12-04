@@ -50,7 +50,7 @@ if (isset($_GET['shohin_id']) && !empty($_GET['shohin_id'])) {
     <hr>
     
     <!-- フォーム部分 -->
-    <form action="shohin_insert_confirm.php" method="post" enctype="multipart/form-data">
+    <form action="shohin_update_confirm.php" method="post" enctype="multipart/form-data">
         <div>
             <p>商品ID<?= $update_shohin['shohin_id']?></p>
         </div>    
@@ -72,7 +72,7 @@ if (isset($_GET['shohin_id']) && !empty($_GET['shohin_id'])) {
             <?php else: ?>
                 <p>画像がアップロードされていません。</p>
             <?php endif; ?>
-            <input type="file" name="shohin_images[]" id="images" accept="image/*" multiple required></p>
+            <input type="file" name="shohin_images[]" id="images" accept="image/*" multiple></p>
 
         </div>
         <div>

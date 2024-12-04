@@ -88,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
         <div>
             <label>商品説明</label>
-            <p><?php echo nl2br($explain); ?></p>
+            <p><?php echo nl2br($shohin_description); ?></p>
             <input type="hidden" name="shohin_description" value="<?php echo $shohin_description; ?>">
         </div>
         <button type="submit">商品を登録する</button>
