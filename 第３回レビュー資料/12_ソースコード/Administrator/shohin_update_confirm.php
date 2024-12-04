@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div>
             <label>商品名</label>
             <span><?php echo $shohin_name; ?></span>
-            <input type="hidden" name="shohin_name" value="<?php echo $name; ?>">
+            <input type="hidden" name="shohin_name" value="<?php echo $shohin_name; ?>">
         </div>
         <div>
             <label>価格 (税込み)</label>
@@ -91,6 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <p><?php echo nl2br($shohin_description); ?></p>
             <input type="hidden" name="shohin_description" value="<?php echo $shohin_description; ?>">
         </div>
+        <input type="hidden" name="shohin_id" value="<?php echo $shohin_id; ?>">
         <button type="submit">商品を更新する</button>
     </form>
 </body>
