@@ -22,8 +22,9 @@
             <p><input type="text" name="post_code" id="f4" placeholder="ハイフンなしで入力してください" required></p>
             <p><label for="address">住所 <span class="mark">必須</span></label></p>
             <p><input type="text" name="address" class="f1" required></p>
-            <p><label for="mail">メールアドレス <span class="mark">必須</span></label></p> 
-            <p><input type="text" name="email" class="f1" required></p>
+            <p><label for="mail">メールアドレス <span class="mark">必須</span></label></p>
+            <p><input type="text" name="email" id="email" class="f1" required></p>
+            <span id="emailError" style="color: red; display: none;">無効なメールアドレスです。</span>
             <p><label for="password">パスワード <span class="mark">必須</span></label></p> 
             <p><input type="password" name="password"  class="f1" required></p>
             <p><label for="birthdate">電話番号 <span class="mark">必須</span></label></p> 
@@ -35,5 +36,36 @@
         </form>
     </div>
     <?php include 'footer.php'; ?>
+    <script>
+    document.getElementById('email').addEventListener('input', function () {
+      const emailInput = this;
+      const emailError = document.getElementById('emailError');
+
+      // メールアドレスの正規表現
+      const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+      // 入力値が正しいかどうかをチェック
+      if (emailRegex.test(emailInput.value)) {
+        emailInput.classList.remove('invalid');
+        emailInput.classList.add('valid');
+        emailError.style.display = 'none';
+      } else {
+        emailInput.classList.remove('valid');
+        emailInput.classList.add('invalid');
+        emailError.style.display = 'inline';
+      }
+    });
+
+    // フォーム送信時のチェック
+    document.getElementById('emailForm').addEventListener('submit', function (e) {
+      const emailInput = document.getElementById('email');
+      const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+      if (!emailRegex.test(emailInput.value)) {
+        e.preventDefault(); // 送信をキャンセル
+        alert('正しいメールアドレスを入力してください。');
+      }
+    });
+  </script>
 </body>
 </html>
