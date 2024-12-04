@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <form action="shohin_updateTodb.php" method="post">
         <div>
             <label>商品名</label>
-            <span><?php echo $name; ?></span>
+            <span><?php echo $shohin_name; ?></span>
             <input type="hidden" name="shohin_name" value="<?php echo $name; ?>">
         </div>
         <div>
