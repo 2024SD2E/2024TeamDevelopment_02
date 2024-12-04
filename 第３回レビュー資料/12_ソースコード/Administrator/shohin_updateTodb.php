@@ -39,8 +39,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             foreach ($_POST['images'] as $image_name) {
                 $stmt->execute([$image_name, $shohin_id]);
             }
-        } else {
-            throw new Exception('画像がありません。');
         }
 
     } catch (Exception $e) {
