@@ -98,7 +98,7 @@ if (isset($_GET['shohin_id']) && !empty($_GET['shohin_id'])) {
                 <div class="quantity-selector">
                     <label for="quantity">数量</label>
                     <button type="button" onclick="decrement()">-</button>
-                    <input type="number" id="quantity" name="quantity" value="1" min="1">
+                    <input type="number" id="quantity" name="quantity" value="1" min="1" max="10">
                     <button type="button" onclick="increment()">+</button>
                 </div>
 
